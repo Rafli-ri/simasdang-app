@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simasdang</title>
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!-- Box Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="header-detail-produk">
+        <div class="container text-center">
+          <img src="assets/img/logo.png" alt="" />
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="card card-detail">
+          <div class="card-body">
+            <h2>
+              <a href="index.html" class="btn text-detail">
+                <i class="bx bx-arrow-back mr-2"></i>
+                Kembali
+              </a>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-form-transaksi mt-3 mb-5">
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title text-center">
+                <h2>Isi Formulir Pemesanan</h2>
+              </div>
+              <form action="" method="">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group mt-5">
+                      <label for="formGroupExampleInput">Id Transaksi</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        disabled
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Alamat Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput"
+                        >No Hp / Whatss App</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Jumlah beli</label>
+                      <input
+                        type="number"
+                        id="jumlah_beli"
+                        class="form-control"
+                        onkeyup="hitungtotal()"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Harga</label>
+                      <input
+                        class="form-control"
+                        id="harga"
+                        type="text"
+                        placeholder="Rp. 20.000"
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Total</label>
+                      <input
+                        class="form-control"
+                        id="total"
+                        type="text"
+                        placeholder=""
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Alamat</label>
+                      <textarea
+                        class="form-control"
+                        rows="4"
+                        cols="50"
+                        style="resize: none"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="index.html"
+                  class="btn btn-outline-info text-decoration-none"
+                  >Kembali</a
+                >
+                <a href="MetodePembayaran.html" class="btn btn-info">Pesan</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <section class="coppy-right">
+      <p class="text-center">&copy; 2021 All Rights Reserved</p>
+    </section>
+    <svg
+      id="wave"
+      style="transform: rotate(0deg); transition: 0.3s"
+      viewBox="0 0 1440 240"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(252, 65, 40, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(243, 106, 62, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        style="transform: translate(0, 0px); opacity: 1"
+        fill="url(#sw-gradient-0)"
+        d="M0,72L60,60C120,48,240,24,360,28C480,32,600,64,720,88C840,112,960,128,1080,132C1200,136,1320,128,1440,104C1560,80,1680,40,1800,40C1920,40,2040,80,2160,100C2280,120,2400,120,2520,108C2640,96,2760,72,2880,72C3000,72,3120,96,3240,120C3360,144,3480,168,3600,164C3720,160,3840,128,3960,132C4080,136,4200,176,4320,192C4440,208,4560,200,4680,192C4800,184,4920,176,5040,156C5160,136,5280,104,5400,108C5520,112,5640,152,5760,156C5880,160,6000,128,6120,100C6240,72,6360,48,6480,60C6600,72,6720,120,6840,148C6960,176,7080,184,7200,176C7320,168,7440,144,7560,116C7680,88,7800,56,7920,64C8040,72,8160,120,8280,120C8400,120,8520,72,8580,48L8640,24L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z"
+      ></path>
+      <defs>
+        <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 106, 11, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        style="transform: translate(0, 50px); opacity: 0.9"
+        fill="url(#sw-gradient-1)"
+        d="M0,96L60,84C120,72,240,48,360,64C480,80,600,136,720,156C840,176,960,160,1080,140C1200,120,1320,96,1440,84C1560,72,1680,72,1800,72C1920,72,2040,72,2160,68C2280,64,2400,56,2520,72C2640,88,2760,128,2880,156C3000,184,3120,200,3240,204C3360,208,3480,200,3600,164C3720,128,3840,64,3960,68C4080,72,4200,144,4320,172C4440,200,4560,184,4680,172C4800,160,4920,152,5040,148C5160,144,5280,144,5400,132C5520,120,5640,96,5760,92C5880,88,6000,104,6120,108C6240,112,6360,104,6480,88C6600,72,6720,48,6840,48C6960,48,7080,72,7200,88C7320,104,7440,112,7560,112C7680,112,7800,104,7920,120C8040,136,8160,176,8280,192C8400,208,8520,200,8580,196L8640,192L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z"
+      ></path>
+      <defs>
+        <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(212.111, 82.584, 0, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(252, 65, 40, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        style="transform: translate(0, 100px); opacity: 0.8"
+        fill="url(#sw-gradient-2)"
+        d="M0,0L60,8C120,16,240,32,360,48C480,64,600,80,720,76C840,72,960,48,1080,36C1200,24,1320,24,1440,48C1560,72,1680,120,1800,124C1920,128,2040,88,2160,92C2280,96,2400,144,2520,172C2640,200,2760,208,2880,192C3000,176,3120,136,3240,104C3360,72,3480,48,3600,36C3720,24,3840,24,3960,40C4080,56,4200,88,4320,88C4440,88,4560,56,4680,64C4800,72,4920,120,5040,152C5160,184,5280,200,5400,172C5520,144,5640,72,5760,48C5880,24,6000,48,6120,68C6240,88,6360,104,6480,128C6600,152,6720,184,6840,180C6960,176,7080,136,7200,116C7320,96,7440,96,7560,92C7680,88,7800,80,7920,96C8040,112,8160,152,8280,160C8400,168,8520,144,8580,132L8640,120L8640,240L8580,240C8520,240,8400,240,8280,240C8160,240,8040,240,7920,240C7800,240,7680,240,7560,240C7440,240,7320,240,7200,240C7080,240,6960,240,6840,240C6720,240,6600,240,6480,240C6360,240,6240,240,6120,240C6000,240,5880,240,5760,240C5640,240,5520,240,5400,240C5280,240,5160,240,5040,240C4920,240,4800,240,4680,240C4560,240,4440,240,4320,240C4200,240,4080,240,3960,240C3840,240,3720,240,3600,240C3480,240,3360,240,3240,240C3120,240,3000,240,2880,240C2760,240,2640,240,2520,240C2400,240,2280,240,2160,240C2040,240,1920,240,1800,240C1680,240,1560,240,1440,240C1320,240,1200,240,1080,240C960,240,840,240,720,240C600,240,480,240,360,240C240,240,120,240,60,240L0,240Z"
+      ></path>
+    </svg>
+
+    <!-- akhir footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/vendor/OwlCarousel/src/js/owl.carousel.js"></script>
+  </body>
+</html>
