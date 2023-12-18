@@ -1,7 +1,7 @@
 # UMKM - Shopping Web App
-## My Project - Simasdang
+## Internship Project - Simasdang
 
-SIMASDANG (Sistem INformasi Sambal Gendang)
+SIMASDANG (Sistem Informasi Sambal Gendang)
 Link : http://simasdang.infinityfreeapp.com/
 
 - Developed 5+ Pages of responsive and user-friendly shopping web apps using HTML, CSS, Javascript, and Bootstrap.
